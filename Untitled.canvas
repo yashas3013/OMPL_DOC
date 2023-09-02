@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"f881e8dfb0c71f42","type":"file","file":"OMPL/Space Information.md","x":-200,"y":-20,"width":400,"height":400},
+		{"id":"de921da82744e4de","type":"file","file":"OMPL/State Space.md","x":60,"y":-520,"width":400,"height":400},
+		{"id":"3219aaf161934660","type":"file","file":"Control Space.md","x":-440,"y":-520,"width":400,"height":400},
+		{"id":"1ace710b6b809696","type":"file","file":"OMPL/Projection Evaluator.md","x":517,"y":-520,"width":400,"height":400},
+		{"id":"76dbd5c2fad5aa55","type":"file","file":"OMPL/State Validator.md","x":-920,"y":-20,"width":400,"height":400},
+		{"id":"e28769fc0e5d2fd3","type":"file","file":"OMPL/Problem Definition.md","x":260,"y":320,"width":400,"height":400},
+		{"id":"a1cce7dd6556aa58","x":760,"y":-20,"width":400,"height":400,"type":"file","file":"OMPL/Optimization Objective.md"},
+		{"id":"a99c46186e890df8","x":-340,"y":640,"width":400,"height":400,"type":"file","file":"OMPL/Path.md"},
+		{"id":"df6cb238c4dd5e4b","x":-920,"y":-431,"width":326,"height":222,"type":"text","text":"# State Propagator\n\nProvides the ability to check the validity of path segments using the interpolation provided by the StateSpace."},
+		{"id":"590eac81d8802954","x":-140,"y":-1040,"width":400,"height":400,"type":"file","file":"OMPL/Bounds in State Space.md"},
+		{"id":"2729ad94471555db","x":307,"y":-960,"width":333,"height":320,"type":"text","text":"# State Sampler \nImplements uniform and Gaussian sampling of states for a specific State Space"}
+	],
+	"edges":[
+		{"id":"217863072cc4a758","fromNode":"de921da82744e4de","fromSide":"bottom","toNode":"f881e8dfb0c71f42","toSide":"top"},
+		{"id":"db2b530903f6c4c9","fromNode":"3219aaf161934660","fromSide":"bottom","toNode":"f881e8dfb0c71f42","toSide":"top"},
+		{"id":"e23d8f4db29f116c","fromNode":"1ace710b6b809696","fromSide":"left","toNode":"de921da82744e4de","toSide":"right"},
+		{"id":"6b29445043e6f588","fromNode":"f881e8dfb0c71f42","fromSide":"bottom","toNode":"e28769fc0e5d2fd3","toSide":"left"},
+		{"id":"7a3b739479c4a5b0","fromNode":"76dbd5c2fad5aa55","fromSide":"right","toNode":"f881e8dfb0c71f42","toSide":"left"},
+		{"id":"2b75b8e4d974478d","fromNode":"df6cb238c4dd5e4b","fromSide":"right","toNode":"3219aaf161934660","toSide":"left"},
+		{"id":"32528fbeb759bf18","fromNode":"2729ad94471555db","fromSide":"bottom","toNode":"de921da82744e4de","toSide":"top"},
+		{"id":"6b606528853f28a6","fromNode":"590eac81d8802954","fromSide":"bottom","toNode":"de921da82744e4de","toSide":"top"},
+		{"id":"f14c2611868f28ad","fromNode":"a1cce7dd6556aa58","fromSide":"left","toNode":"e28769fc0e5d2fd3","toSide":"top"},
+		{"id":"6a864fe22aeb60e2","fromNode":"e28769fc0e5d2fd3","fromSide":"bottom","toNode":"a99c46186e890df8","toSide":"top"}
+	]
+}
