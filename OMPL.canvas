@@ -1,7 +1,7 @@
 {
 	"nodes":[
 		{"id":"860e82be3a240ad2","type":"text","text":"## State Validator\n\nValidates if a state is collision free or not","x":-220,"y":-221,"width":250,"height":139},
-		{"id":"e0b22cc6cae4d0da","type":"text","text":"## Optimization Objective\nOptimisation for path length to minimal","x":-51,"y":180,"width":353,"height":140},
+		{"id":"e0b22cc6cae4d0da","type":"text","text":"## Optimization Objective\nOptimisation for path length to minimal","x":-51,"y":180,"width":337,"height":140},
 		{"type":"text","text":"## State Space \n\nRepresentation of the state space withing which planning is done.","id":"ef0a3de7acfb018e","x":-520,"y":-221,"width":250,"height":200},
 		{"id":"a285a8b223d0bec9","type":"text","text":"## Space Information\n\nContains information about space planning","x":-34,"y":20,"width":320,"height":140},
 		{"id":"ffa299495522e0e7","type":"text","text":"## Planner \nSolves problem by using the space ","x":420,"y":11,"width":265,"height":159},
@@ -11,10 +11,10 @@
 	"edges":[
 		{"id":"039897fadaeb7132","fromNode":"ef0a3de7acfb018e","fromSide":"bottom","toNode":"a285a8b223d0bec9","toSide":"left","label":"/states"},
 		{"id":"f302439e60b2435b","fromNode":"a285a8b223d0bec9","fromSide":"top","toNode":"a698c7fb01fb094c","toSide":"bottom","label":"/si"},
-		{"id":"b432d3168994af0e","fromNode":"860e82be3a240ad2","fromSide":"bottom","toNode":"a285a8b223d0bec9","toSide":"left","label":"/is_true?"},
 		{"id":"92c20a743e25f1bd","fromNode":"1253cad18aec9569","fromSide":"bottom","toNode":"860e82be3a240ad2","toSide":"right","label":"/obstacles"},
 		{"id":"a1e62b5fbc100be9","fromNode":"a698c7fb01fb094c","fromSide":"right","toNode":"ffa299495522e0e7","toSide":"top","label":"/path"},
 		{"id":"1d426e7d7396ac54","fromNode":"ffa299495522e0e7","fromSide":"bottom","toNode":"e0b22cc6cae4d0da","toSide":"right","label":"/path"},
-		{"id":"fc8c2f00bfac6802","fromNode":"1253cad18aec9569","fromSide":"right","toNode":"a698c7fb01fb094c","toSide":"top","label":"/goal\n/start"}
+		{"id":"fc8c2f00bfac6802","fromNode":"1253cad18aec9569","fromSide":"right","toNode":"a698c7fb01fb094c","toSide":"top","label":"/goal\n/start"},
+		{"id":"77eabfc920817c81","fromNode":"860e82be3a240ad2","fromSide":"bottom","toNode":"a285a8b223d0bec9","toSide":"left"}
 	]
 }
