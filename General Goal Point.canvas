@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"bdb5cdb60dd2edf2","type":"text","text":"## SLAM\n\n1. OctoMap 300x300","x":720,"y":-1080,"width":280,"height":180,"color":"1"},
+		{"id":"d34173f4f943db4f","type":"text","text":"## Behavioural Tree\n1. Knowledge","x":-160,"y":-1020,"width":280,"height":180},
+		{"id":"59803df8728131ee","type":"text","text":"## Controller Server\n\n1. ","x":660,"y":-800,"width":300,"height":180,"color":"1"},
+		{"id":"a7f110506c209b2c","type":"text","text":"## Path Planner\n1. OMPL","x":420,"y":-1320,"width":300,"height":180,"color":"1"},
+		{"id":"dcf186434846d71a","type":"text","text":"## Perception\n1. Road detection\n2. *Speed Breakers*","x":40,"y":-1380,"width":240,"height":220},
+		{"id":"c64d40ca9a7b0760","type":"text","text":"## Localisation\n1. 3D localisation \n\t1. GPS\n\t2. IMU\n\t3. Encoders","x":240,"y":-720,"width":280,"height":200,"color":"1"}
+	],
+	"edges":[
+		{"id":"2edfb5a1a3d383ef","fromNode":"bdb5cdb60dd2edf2","fromSide":"top","toNode":"a7f110506c209b2c","toSide":"right","label":"/octree"},
+		{"id":"4cb4446a87d2d476","fromNode":"c64d40ca9a7b0760","fromSide":"right","toNode":"a7f110506c209b2c","toSide":"bottom","label":"/odom"},
+		{"id":"51cb03817dd2594b","fromNode":"dcf186434846d71a","fromSide":"bottom","toNode":"d34173f4f943db4f","toSide":"top","label":"/alerts"},
+		{"id":"b80d91846558a47f","fromNode":"d34173f4f943db4f","fromSide":"right","toNode":"a7f110506c209b2c","toSide":"left"},
+		{"id":"65e3e359bdcf2f71","fromNode":"d34173f4f943db4f","fromSide":"right","toNode":"c64d40ca9a7b0760","toSide":"top"},
+		{"id":"8109ae19b21332ee","fromNode":"d34173f4f943db4f","fromSide":"right","toNode":"bdb5cdb60dd2edf2","toSide":"left"},
+		{"id":"c16a9d099aa06459","fromNode":"a7f110506c209b2c","fromSide":"bottom","toNode":"d34173f4f943db4f","toSide":"right"},
+		{"id":"aa7b7c79c6cee285","fromNode":"bdb5cdb60dd2edf2","fromSide":"left","toNode":"d34173f4f943db4f","toSide":"right"},
+		{"id":"760fa4193fd026d3","fromNode":"c64d40ca9a7b0760","fromSide":"bottom","toNode":"bdb5cdb60dd2edf2","toSide":"bottom","label":"/odom"},
+		{"id":"6a6f981d09f23634","fromNode":"a7f110506c209b2c","fromSide":"bottom","toNode":"59803df8728131ee","toSide":"top","label":"/path"},
+		{"id":"d7fb3c626fbc6d69","fromNode":"c64d40ca9a7b0760","fromSide":"left","toNode":"d34173f4f943db4f","toSide":"right"},
+		{"id":"ff7c54e560148ad9","fromNode":"c64d40ca9a7b0760","fromSide":"bottom","toNode":"59803df8728131ee","toSide":"bottom"}
+	]
+}

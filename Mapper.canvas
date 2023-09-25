@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"9bdbbd027076973b","type":"text","text":"## Realsense Depth \n![[Pasted image 20230920222956.png]]","x":-600,"y":-380,"width":440,"height":400},
+		{"id":"66b1719f505a5a17","x":20,"y":-440,"width":360,"height":210,"type":"text","text":"## Ground \n![[Pasted image 20230920223050.png]]"},
+		{"id":"9607a121e0911e4b","x":20,"y":-160,"width":360,"height":260,"type":"text","text":"## Obstacles\n![[Pasted image 20230920223156.png]]"},
+		{"id":"2b6b048784a6279f","x":471,"y":-418,"width":279,"height":166,"type":"text","text":"## Ground Octree\n1. Check wheels \n2. Check inclination\n3. Check lanes/ roads etc"},
+		{"id":"1d515968e858c570","x":471,"y":-109,"width":279,"height":158,"type":"text","text":"## Obstacle Octree\n1. Check collision"}
+	],
+	"edges":[
+		{"id":"52367bdf057ebe69","fromNode":"9bdbbd027076973b","fromSide":"right","toNode":"66b1719f505a5a17","toSide":"left","label":"RANSAC"},
+		{"id":"c417cea84fd0792d","fromNode":"9bdbbd027076973b","fromSide":"right","toNode":"9607a121e0911e4b","toSide":"left","label":"PCL-RANSAC"},
+		{"id":"bb05775a5235750a","fromNode":"66b1719f505a5a17","fromSide":"right","toNode":"2b6b048784a6279f","toSide":"left"},
+		{"id":"d4b6d75c6a0f7db6","fromNode":"9607a121e0911e4b","fromSide":"right","toNode":"1d515968e858c570","toSide":"left"}
+	]
+}
