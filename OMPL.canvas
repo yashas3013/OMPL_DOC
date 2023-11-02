@@ -1,16 +1,19 @@
 {
 	"nodes":[
-		{"id":"ffa299495522e0e7","type":"text","text":"## Planner \nSolves problem by using the space ","x":480,"y":21,"width":265,"height":159},
-		{"id":"bd5473444f9d0ab4","type":"text","text":"## Bounds\n\n- Set dynamic bounds accrding to map size","x":540,"y":-531,"width":332,"height":176},
-		{"type":"text","text":"## Problem Definition \nSpecifies planning problem\nUser should define Start and end goal","id":"a698c7fb01fb094c","x":260,"y":-247,"width":320,"height":165},
 		{"id":"a285a8b223d0bec9","type":"text","text":"## Space Information\n\nContains information about space planning","x":118,"y":21,"width":320,"height":140},
-		{"id":"e0b22cc6cae4d0da","type":"text","text":"## Optimization Objective\n- Optimisation for path length to minimal\n- Dynamic constraints at different terrains","x":20,"y":180,"width":337,"height":220},
-		{"type":"text","text":"## State Space \n\nRepresentation of the state space withing which planning is done.\nSE3 space for planning","id":"ef0a3de7acfb018e","x":-400,"y":-221,"width":250,"height":200},
-		{"id":"19b31d0259d87286","type":"text","text":"## Control Space \n- give differential drive parameters\n- Define dynamic contstraints while at different terrains/ situtions\n","x":-478,"y":180,"width":311,"height":173},
-		{"id":"8de922602bf081c4","type":"text","text":"## Collision checker\n\n- check colisions using octree \n- Check lanes both left and right\n- Check potholes\n\n\n","x":-550,"y":-616,"width":275,"height":204},
-		{"id":"755e0483018f7311","type":"text","text":"## Perception\n\n- Detect lanes \n- Detect potholes \n- Do depth image proc to pcl of the lanes/potholes\n- add to octree \n\n","x":-105,"y":-845,"width":250,"height":229},
-		{"id":"1253cad18aec9569","type":"text","text":"## Mapper (SLAM)\n\nMaps the surrounding using\n3D obstacles ","x":145,"y":-583,"width":285,"height":171},
-		{"id":"860e82be3a240ad2","type":"text","text":"## State Validator\n\nValidates if a state is collision free or not","x":-62,"y":-221,"width":250,"height":139}
+		{"type":"text","text":"## State Space \n\nRepresentation of the state space withing which planning is done.\nSE3 space for planning","id":"ef0a3de7acfb018e","x":-322,"y":-182,"width":250,"height":200},
+		{"id":"755e0483018f7311","type":"text","text":"## Perception\n\n- Detect lanes \n- Detect potholes \n- Do depth image proc to pcl of the lanes/potholes\n- add to octree \n\n","x":-650,"y":-253,"width":250,"height":229},
+		{"id":"bd5473444f9d0ab4","type":"text","text":"## Bounds\n\n- Set dynamic bounds accrding to map size","x":579,"y":-540,"width":332,"height":176},
+		{"id":"860e82be3a240ad2","type":"text","text":"## State Validator\n\nValidates if a state is collision free or not","x":-40,"y":-208,"width":250,"height":139},
+		{"type":"text","text":"## Problem Definition \nSpecifies planning problem\nUser should define Start and end goal","id":"a698c7fb01fb094c","x":331,"y":-221,"width":320,"height":165},
+		{"id":"ffa299495522e0e7","type":"text","text":"## Planner \nSolves problem by using the space ","x":473,"y":89,"width":265,"height":159},
+		{"id":"1253cad18aec9569","type":"text","text":"## Mapper (SLAM)\n\nMaps the surrounding using\n3D obstacles\n","x":240,"y":-535,"width":285,"height":171},
+		{"id":"19b31d0259d87286","type":"text","text":"## Control Space \n- give differential drive parameters\n- Define dynamic contstraints while at different terrains/ situtions\n","x":-489,"y":82,"width":311,"height":173,"color":"2"},
+		{"id":"73fd5c30630f572e","type":"text","text":"## Control Systems\n\n1. MPC control system\n","x":-197,"y":465,"width":370,"height":140},
+		{"id":"f1399da4bfcf6682","type":"text","text":"## Situation of the bot\n\n1. Four wheels on the ground or not \n2. Power left \n3. External Environment","x":-500,"y":325,"width":303,"height":210},
+		{"id":"e0b22cc6cae4d0da","type":"text","text":"## Optimization Objective\n- Optimisation for path length to minimal\n- Dynamic constraints at different terrains","x":42,"y":210,"width":337,"height":220},
+		{"id":"94dd571b26f464ef","type":"text","text":"## Localisation\n1. UKF/EKF  - IMU, GPS, Wheel odom, Baro\n2. 3D loacalisation (x,y,z,roll,pitch,yaw)\n","x":-72,"y":-715,"width":303,"height":215},
+		{"id":"8de922602bf081c4","type":"text","text":"## Collision checker\n\n- check colisions using octree \n- Check lanes both left and right\n- Check potholes\n\n\n","x":-347,"y":-500,"width":275,"height":204}
 	],
 	"edges":[
 		{"id":"039897fadaeb7132","fromNode":"ef0a3de7acfb018e","fromSide":"bottom","toNode":"a285a8b223d0bec9","toSide":"left","label":"/states"},
@@ -21,9 +24,16 @@
 		{"id":"77eabfc920817c81","fromNode":"860e82be3a240ad2","fromSide":"bottom","toNode":"a285a8b223d0bec9","toSide":"left","label":"/isvalid"},
 		{"id":"01a056a7fc990ae0","fromNode":"8de922602bf081c4","fromSide":"bottom","toNode":"860e82be3a240ad2","toSide":"top"},
 		{"id":"2cc8de3c67e48f56","fromNode":"1253cad18aec9569","fromSide":"bottom","toNode":"8de922602bf081c4","toSide":"right","label":"/map_octree"},
-		{"id":"afae8c32cb361d44","fromNode":"755e0483018f7311","fromSide":"bottom","toNode":"8de922602bf081c4","toSide":"right","label":"lanes/potholes_octree"},
+		{"id":"afae8c32cb361d44","fromNode":"755e0483018f7311","fromSide":"right","toNode":"8de922602bf081c4","toSide":"left","label":"lanes/potholes_octree"},
 		{"id":"a91df1bc391210bf","fromNode":"19b31d0259d87286","fromSide":"right","toNode":"a285a8b223d0bec9","toSide":"left","label":"/states"},
 		{"id":"cb18f2efaa08116f","fromNode":"bd5473444f9d0ab4","fromSide":"bottom","toNode":"860e82be3a240ad2","toSide":"top"},
-		{"id":"2707b28c8d2a8166","fromNode":"1253cad18aec9569","fromSide":"top","toNode":"bd5473444f9d0ab4","toSide":"top","label":"map_size"}
+		{"id":"2707b28c8d2a8166","fromNode":"1253cad18aec9569","fromSide":"top","toNode":"bd5473444f9d0ab4","toSide":"top","label":"map_size"},
+		{"id":"e9801363eb2903bb","fromNode":"94dd571b26f464ef","fromSide":"bottom","toNode":"1253cad18aec9569","toSide":"left","label":"/pose"},
+		{"id":"f557dfc4eff7aa72","fromNode":"e0b22cc6cae4d0da","fromSide":"bottom","toNode":"73fd5c30630f572e","toSide":"right","label":"/path"},
+		{"id":"b6b4c0ed76859263","fromNode":"f1399da4bfcf6682","fromSide":"top","toNode":"19b31d0259d87286","toSide":"bottom"},
+		{"id":"a68aafd4158ae788","fromNode":"f1399da4bfcf6682","fromSide":"right","toNode":"e0b22cc6cae4d0da","toSide":"left"},
+		{"id":"e05172f95860c8ac","fromNode":"755e0483018f7311","fromSide":"bottom","toNode":"f1399da4bfcf6682","toSide":"left"},
+		{"id":"4fc3fba6d02a1c6a","fromNode":"a285a8b223d0bec9","fromSide":"top","toNode":"860e82be3a240ad2","toSide":"right","label":"/states"},
+		{"id":"53788163883095e1","fromNode":"94dd571b26f464ef","fromSide":"left","toNode":"73fd5c30630f572e","toSide":"bottom"}
 	]
 }
