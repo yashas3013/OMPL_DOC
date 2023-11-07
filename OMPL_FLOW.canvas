@@ -1,7 +1,6 @@
 {
 	"nodes":[
 		{"id":"f881e8dfb0c71f42","type":"file","file":"OMPL/Space Information.md","x":-200,"y":-20,"width":400,"height":400},
-		{"id":"de921da82744e4de","type":"file","file":"OMPL/State Space.md","x":60,"y":-520,"width":400,"height":400},
 		{"id":"3219aaf161934660","type":"file","file":"OMPL/Control Space.md","x":-440,"y":-520,"width":400,"height":400},
 		{"id":"1ace710b6b809696","type":"file","file":"OMPL/Projection Evaluator.md","x":517,"y":-520,"width":400,"height":400},
 		{"id":"e28769fc0e5d2fd3","type":"file","file":"OMPL/Problem Definition.md","x":260,"y":320,"width":400,"height":400},
@@ -10,7 +9,8 @@
 		{"id":"df6cb238c4dd5e4b","type":"text","text":"# State Propagator\n\nProvides the ability to check the validity of path segments using the interpolation provided by the StateSpace.","x":-920,"y":-431,"width":326,"height":222},
 		{"id":"590eac81d8802954","type":"file","file":"OMPL/Bounds in State Space.md","x":-140,"y":-1040,"width":400,"height":400},
 		{"id":"2729ad94471555db","type":"text","text":"# State Sampler \nImplements uniform and Gaussian sampling of states for a specific State Space","x":331,"y":-1040,"width":373,"height":400},
-		{"id":"76dbd5c2fad5aa55","type":"file","file":"OMPL/State Validator.md","x":-920,"y":-20,"width":400,"height":400}
+		{"id":"76dbd5c2fad5aa55","type":"file","file":"OMPL/State Validator.md","x":-920,"y":-20,"width":400,"height":400},
+		{"id":"de921da82744e4de","type":"file","file":"OMPL/State Space.md","x":60,"y":-520,"width":400,"height":400}
 	],
 	"edges":[
 		{"id":"217863072cc4a758","fromNode":"de921da82744e4de","fromSide":"bottom","toNode":"f881e8dfb0c71f42","toSide":"top"},

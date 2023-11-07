@@ -1,15 +1,25 @@
 {
 	"nodes":[
-		{"id":"9bdbbd027076973b","type":"text","text":"## Realsense Depth \n![[Pasted image 20230920222956.png]]","x":-600,"y":-380,"width":440,"height":400},
-		{"id":"66b1719f505a5a17","x":20,"y":-440,"width":360,"height":210,"type":"text","text":"## Ground \n![[Pasted image 20230920223050.png]]"},
-		{"id":"9607a121e0911e4b","x":20,"y":-160,"width":360,"height":260,"type":"text","text":"## Obstacles\n![[Pasted image 20230920223156.png]]"},
-		{"id":"2b6b048784a6279f","x":471,"y":-418,"width":279,"height":166,"type":"text","text":"## Ground Octree\n1. Check wheels \n2. Check inclination\n3. Check lanes/ roads etc"},
-		{"id":"1d515968e858c570","x":471,"y":-109,"width":279,"height":158,"type":"text","text":"## Obstacle Octree\n1. Check collision"}
+		{"id":"2c3c3536db45dcae","type":"text","text":"Depth Camera (Detectron)\n- Need Segmentation region wise\n![[Pasted image 20231107161457.png]]","x":-1100,"y":-402,"width":560,"height":400},
+		{"id":"df7790f2a02b7048","x":-460,"y":-302,"width":310,"height":200,"type":"text","text":"## Behavioural Tree\n\n1. Check road is detected\n2. Check if bot crossing hump in future\n3. Check if lanes are detected \n"},
+		{"id":"95bb3c30bcad3871","type":"text","text":"## Road PCL\n\nroad_poly to pcl \n","x":-26,"y":-600,"width":300,"height":128},
+		{"id":"a46b0e7157368db3","type":"text","text":"## Road Octomap\n\nroad_pcl to octomap wrt odom frame","x":380,"y":-602,"width":300,"height":130},
+		{"id":"c40dd5c42b21544c","x":-15,"y":-402,"width":289,"height":131,"type":"text","text":"## Lane Pcl\n\nlane_poly to pcl"},
+		{"id":"dd5d935f5ed8f26f","x":385,"y":-180,"width":300,"height":126,"type":"text","text":"## Ground octomap\n\nground_pcl to octomap wrt odom frame"},
+		{"id":"d495709ff4d0f2ff","x":-15,"y":-180,"width":266,"height":126,"type":"text","text":"## Ground Pcl\n\nground_poly to pcl"},
+		{"id":"04f74c44a05aebd9","type":"text","text":"## Obstacle Pcl\n\nobstacle_poly to pcl","x":-9,"y":-2,"width":266,"height":126},
+		{"id":"edc1d5f73f48e040","x":392,"y":-2,"width":298,"height":126,"type":"text","text":"## Obstacle octomap\n\nobstacle_plc to octomap wrt odom"},
+		{"id":"e7782e6c95ed2087","x":380,"y":-399,"width":312,"height":126,"type":"text","text":"## Lane octomap\n\nlane_pcl to octomap wrt odom frame"}
 	],
 	"edges":[
-		{"id":"52367bdf057ebe69","fromNode":"9bdbbd027076973b","fromSide":"right","toNode":"66b1719f505a5a17","toSide":"left","label":"RANSAC"},
-		{"id":"c417cea84fd0792d","fromNode":"9bdbbd027076973b","fromSide":"right","toNode":"9607a121e0911e4b","toSide":"left","label":"PCL-RANSAC"},
-		{"id":"bb05775a5235750a","fromNode":"66b1719f505a5a17","fromSide":"right","toNode":"2b6b048784a6279f","toSide":"left"},
-		{"id":"d4b6d75c6a0f7db6","fromNode":"9607a121e0911e4b","fromSide":"right","toNode":"1d515968e858c570","toSide":"left"}
+		{"id":"1b57ce7b29643353","fromNode":"df7790f2a02b7048","fromSide":"right","toNode":"95bb3c30bcad3871","toSide":"left","label":"road_Poly"},
+		{"id":"37947e2d6de7c2f5","fromNode":"95bb3c30bcad3871","fromSide":"right","toNode":"a46b0e7157368db3","toSide":"left"},
+		{"id":"7c328e3c1c3f0482","fromNode":"df7790f2a02b7048","fromSide":"right","toNode":"c40dd5c42b21544c","toSide":"left","label":"lanes"},
+		{"id":"dd15c4620e45fb04","fromNode":"c40dd5c42b21544c","fromSide":"right","toNode":"e7782e6c95ed2087","toSide":"left"},
+		{"id":"5710b32a22d98b48","fromNode":"2c3c3536db45dcae","fromSide":"right","toNode":"df7790f2a02b7048","toSide":"left"},
+		{"id":"c20e19e3e5e78def","fromNode":"df7790f2a02b7048","fromSide":"right","toNode":"d495709ff4d0f2ff","toSide":"left","label":"ground_poly"},
+		{"id":"18db285315c85dd5","fromNode":"d495709ff4d0f2ff","fromSide":"right","toNode":"dd5d935f5ed8f26f","toSide":"left"},
+		{"id":"174d4e8688b4669d","fromNode":"df7790f2a02b7048","fromSide":"right","toNode":"04f74c44a05aebd9","toSide":"left","label":"obstacle_poly"},
+		{"id":"f2cd945fc4f9a73b","fromNode":"04f74c44a05aebd9","fromSide":"right","toNode":"edc1d5f73f48e040","toSide":"left"}
 	]
 }
